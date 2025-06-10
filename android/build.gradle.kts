@@ -2,6 +2,13 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
+    }
+    configurations.all {
+        resolutionStrategy {
+            force("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
+            force("org.jetbrains.kotlin:kotlin-stdlib-common:1.9.0")
+        }
     }
 }
 
